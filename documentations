@@ -1,0 +1,14 @@
+les tests statistique
+
+1 T test (t.test(data = predata, GAD_7_Score~Gender))
+avoir seulement deux groupes
+variable a predire numerique
+h0: il n'y a pas de difference significative entre les deux groupes: moyenne(Homme) = moyenne(femme) pvalue > 0,05
+h1: il y a une difference significative entre les deux groupes: moyenne(Homme) different de  moyenne(femme) pvalue < 0,05
+
+
+2 Anova (modelanova <- aov(data = predata, GAD_7_Score~Dominant_Content_Type))
+avoir plus de deux variables
+variable a predire en numerique
+h0: il n'y a pas de difference significative entre tout les groupes: moyenne(Homme) = moyenne(femme) = moyenne(autre) pvalue > 0,05
+h1: il y a une difference significative entre les deux groupes: moyenne(Homme) different de  moyenne(femme) differnt de (autre) pvalue < 0,05
