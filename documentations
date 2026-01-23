@@ -1,5 +1,8 @@
 les tests statistique
 
+L'orsque le pr > 0,05 nous retenons l'hypothese 0
+l'orsque le pr < 0,05 nous retenons l'hypothese 1
+
 1 T test (t.test(data = predata, GAD_7_Score~Gender))
 avoir seulement deux groupes
 variable a predire numerique
@@ -10,5 +13,26 @@ h1: il y a une difference significative entre les deux groupes: moyenne(Homme) d
 2 Anova (modelanova <- aov(data = predata, GAD_7_Score~Dominant_Content_Type))
 avoir plus de deux variables
 variable a predire en numerique
-h0: il n'y a pas de difference significative entre tout les groupes: moyenne(Homme) = moyenne(femme) = moyenne(autre) pvalue > 0,05
-h1: il y a une difference significative entre les deux groupes: moyenne(Homme) different de  moyenne(femme) differnt de (autre) pvalue < 0,05
+h0: Il n’existe pas de différence significative du score d’anxiété (GAD-7) selon le type de contenu dominant consommé.
+h1: Le score d’anxiété (GAD-7) diffère significativement selon le type de contenu dominant consommé.
+
+3 Anova (modelanova1 <- aov(data = predata, GAD_7_Score~User_Archetype))
+h0: il n'existe pas de difference significative du score d'anxiete selon l'Utilisateur archétype
+h1: il existe une difference significative du score d'anxiete selon l'Utilisateur archétype
+
+
+4 Anova (modelanova2 <- aov(data = predata, GAD_7_Score~Primary_Platform))
+h0: il n'existe pas de difference significative du score d'anxiete selon le type d'utilisateur
+h1: il existe une difference significative du score d'anxiete selon le type d'utilisateur
+
+5 Anova (modelanova3 <- aov(data = predata, GAD_7_Score~Activity_Type))
+h0: il n'existe pas de difference significative du score d'anxiete selon le type d'activite
+h1: il existe une difference significative du score d'anxiete selon le type d'activite
+
+
+pour Les annalise des variables numeriques on efectuera des test de corelation
+
+la standardisation
+c'est d'empecher qu'une valeur trop haute influence le 
+dimunier l'impacte d'une variable qui a un grand impacte sur une autre 
+
